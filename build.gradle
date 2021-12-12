@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+group = 'com.bentozord'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    testImplementation 'org.spockframework:spock-core:2.1-M2-groovy-3.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
