@@ -12,7 +12,11 @@ class ModificationDateLessRule implements RuleStrategy {
     public List<File> match(String ruleParam, String path) {
         File directory = new File(path);
         return Arrays.stream(directory.listFiles())
-                .filter(file -> file.lastModified() > LocalDate.parse(ruleParam).toEpochDay())
+                .filter(file ->
+                        file.lastModified() >
+                                LocalDate.parse(
+                                        DateUtils.parseToProperDateFormat(ruleParam)
+                                ).toEpochDay())
                 .collect(Collectors.toList());
     }
 }

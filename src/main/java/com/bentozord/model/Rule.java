@@ -11,11 +11,11 @@ public class Rule {
         this.param = param;
     }
 
-    public String getString() {
+    public String getMatcherRule() {
         return matcherRule;
     }
 
-    public void setString(String matcherRule) {
+    public void setMatcherRule(String matcherRule) {
         this.matcherRule = matcherRule;
     }
 

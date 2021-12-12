@@ -4,6 +4,6 @@ public class PathService {
 
     //TODO read path given by an user
     String getPath() {
-        return "tst";
+        return "src/test/resources";
     }
 }

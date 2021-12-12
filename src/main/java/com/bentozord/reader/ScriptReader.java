@@ -12,9 +12,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class ScriptReader {
+public class ScriptReader {
 
-    List<Script> readInput(String filename) {
+    public List<Script> readInput(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             Gson gson = new Gson();
             final FileBotInput fileBotInput = gson.fromJson(reader.lines().collect(Collectors.joining()), FileBotInput.class);

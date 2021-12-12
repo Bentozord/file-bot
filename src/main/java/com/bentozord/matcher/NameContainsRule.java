@@ -11,7 +11,7 @@ class NameContainsRule implements RuleStrategy {
     public List<File> match(String ruleParam, String path) {
         File directory = new File(path);
         return Arrays.stream(directory.listFiles())
-                .filter(file -> file.getName().equalsIgnoreCase(ruleParam))
+                .filter(file -> file.getName().contains(ruleParam))
                 .collect(Collectors.toList());
     }
 }

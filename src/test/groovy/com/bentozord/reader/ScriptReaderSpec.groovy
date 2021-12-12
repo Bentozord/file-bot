@@ -2,7 +2,7 @@ package com.bentozord.reader
 
 import spock.lang.Specification
 
-class ScripReaderSpec extends Specification {
+class ScriptReaderSpec extends Specification {
 
     ScriptReader reader = new ScriptReader()
 
